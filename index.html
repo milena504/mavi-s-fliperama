@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Mavi's Bar e Fliperamas</title>
+</head>
+<body>
+
+    <!-- Fundo de pixels -->
+    <div class="pixel-background"></div>
+
+    <div class="topo">
+        <img src="img/logo.png" class="logo" alt="Logo Mavi's">
+    </div>
+
+    <!-- ===== PRIMEIRA TELA ===== -->
+    <div class="container" id="primeira-tela">
+        <div class="left">
+            <div class="pixels-top"></div>
+            <h1 class="titulo">MAVI'S</h1>
+            <p class="sub">BAR E FLIPERAMAS</p>
+            <button class="start" id="start-btn">START</button>
+            <div class="pixels-bottom"></div>
+        </div>
+        <div class="right">
+            <img src="img/naruto.png" class="img-principal" alt="Imagem principal">
+        </div>
+    </div>
+
+    <!-- ===== SEGUNDA TELA - LOGIN ===== -->
+    <div class="login-tela" id="login-tela">
+        <div class="login-container-centralizado">
+            <div class="login-box">
+                <div class="pixels-top"></div>
+                <div class="login-content">
+                    <h1 class="login-titulo">LOGIN</h1>
+                    <p class="login-subtitulo">SEJA BEM VINDO(A)</p>
+                    <form class="login-form">
+                        <div class="input-group">
+                            <label for="email">EMAIL</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="senha">SENHA</label>
+                            <input type="password" id="senha" name="senha" required>
+                        </div>
+                        <div class="lembrar-senha">
+                            <input type="checkbox" id="lembrar">
+                            <label for="lembrar">LEMBRAR MINHA SENHA</label>
+                        </div>
+                        <button type="submit" class="login-btn">ENTRAR</button>
+                    </form>
+                </div>
+                <button class="back-btn" id="back-btn">VOLTAR</button>
+                <div class="pixels-bottom"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== TERCEIRA TELA - OPÇÕES PRINCIPAIS ===== -->
+    <div class="opcoes-tela" id="opcoes-tela">
+        <div class="opcoes-container">
+            <div class="opcoes-header">
+                <h1 class="opcoes-titulo">ESCOLHA SUA DIVERSÃO</h1>
+                <p class="opcoes-subtitulo">O QUE VOCÊ QUER FAZER HOJE?</p>
+            </div>
+            <div class="opcoes-grid">
+                <div class="opcao-card" data-opcao="cinema">
+                    <div class="opcao-icon">🎬</div>
+                    <h3 class="opcao-titulo">CINEMA</h3>
+                    <p class="opcao-descricao">Assista aos melhores filmes</p>
+                </div>
+                <div class="opcao-card" data-opcao="karaoke">
+                    <div class="opcao-icon">🎤</div>
+                    <h3 class="opcao-titulo">KARAOKÊ</h3>
+                    <p class="opcao-descricao">Solte a sua voz</p>
+                </div>
+                <div class="opcao-card" data-opcao="jogos">
+                    <div class="opcao-icon">🎮</div>
+                    <h3 class="opcao-titulo">JOGOS</h3>
+                    <p class="opcao-descricao">Fliperamas e diversão</p>
+                </div>
+                <div class="opcao-card" data-opcao="comidas">
+                    <div class="opcao-icon">🍕</div>
+                    <h3 class="opcao-titulo">COMIDAS</h3>
+                    <p class="opcao-descricao">Delícias e petiscos</p>
+                </div>
+                <!-- NOVA OPÇÃO: PONTOS -->
+                <div class="opcao-card" data-opcao="pontos">
+                    <div class="opcao-icon">🏆</div>
+                    <h3 class="opcao-titulo">MEUS PONTOS</h3>
+                    <p class="opcao-descricao">Veja e troque seus pontos</p>
+                </div>
+                <!-- NOVA OPÇÃO: PERFIL -->
+                <div class="opcao-card" data-opcao="perfil">
+                    <div class="opcao-icon">👤</div>
+                    <h3 class="opcao-titulo">MEU PERFIL</h3>
+                    <p class="opcao-descricao">Visualize suas informações</p>
+                </div>
+            </div>
+            <button class="back-btn opcoes-back-btn" id="opcoes-back-btn">VOLTAR</button>
+        </div>
+    </div>
+
+    <!-- ===== TELA DO CINEMA - CATEGORIAS ===== -->
+    <div class="categoria-tela" id="cinema-tela">
+        <div class="categoria-container">
+            <div class="categoria-header">
+                <h1 class="categoria-titulo">🎬 CINEMA</h1>
+                <p class="categoria-subtitulo">ESCOLHA O GÊNERO DO FILME</p>
+            </div>
+            <div class="categoria-content">
+                <div class="filmes-grid">
+                    <div class="filme-card" data-genero="acao">
+                        <div class="filme-poster">💥</div>
+                        <h3>AÇÃO E AVENTURA</h3>
+                        <p>Filmes cheios de adrenalina</p>
+                    </div>
+                    <div class="filme-card" data-genero="comedia">
+                        <div class="filme-poster">😂</div>
+                        <h3>COMÉDIA</h3>
+                        <p>Risadas garantidas</p>
+                    </div>
+                    <div class="filme-card" data-genero="terror">
+                        <div class="filme-poster">👻</div>
+                        <h3>TERROR</h3>
+                        <p>Prepare-se para o susto</p>
+                    </div>
+                    <div class="filme-card" data-genero="romance">
+                        <div class="filme-poster">💖</div>
+                        <h3>ROMANCE</h3>
+                        <p>Histórias de amor</p>
+                    </div>
+                </div>
+            </div>
+            <button class="back-btn categoria-back-btn" data-voltar="opcoes">VOLTAR</button>
+        </div>
+    </div>
+
+    <!-- ===== TELA DO KARAOKÊ - ESTILOS ===== -->
+    <div class="categoria-tela" id="karaoke-tela">
+        <div class="categoria-container">
+            <div class="categoria-header">
+                <h1 class="categoria-titulo">🎤 KARAOKÊ</h1>
+                <p class="categoria-subtitulo">ESCOLHA O ESTILO MUSICAL</p>
+            </div>
+            <div class="categoria-content">
+                <div class="karaoke-options">
+                    <div class="karaoke-card" data-estilo="pop">
+                        <div class="karaoke-icon">🎵</div>
+                        <h3>POP INTERNACIONAL</h3>
+                        <p>Sucessos mundiais</p>
+                    </div>
+                    <div class="karaoke-card" data-estilo="rock">
+                        <div class="karaoke-icon">🎸</div>
+                        <h3>ROCK</h3>
+                        <p>Clássicos do rock</p>
+                    </div>
+                    <div class="karaoke-card" data-estilo="mpb">
+                        <div class="karaoke-icon">🎹</div>
+                        <h3>MPB & SAMBA</h3>
+                        <p>Música brasileira</p>
+                    </div>
+                    <div class="karaoke-card" data-estilo="sertanejo">
+                        <div class="karaoke-icon">🎤</div>
+                        <h3>SERTANEJO</h3>
+                        <p>Sucessos country brasileiro</p>
+                    </div>
+                </div>
+            </div>
+            <button class="back-btn categoria-back-btn" data-voltar="opcoes">VOLTAR</button>
+        </div>
+    </div>
+
+    <!-- ===== TELA DE JOGOS - TIPOS ===== -->
+    <div class="categoria-tela" id="jogos-tela">
+        <div class="categoria-container">
+            <div class="categoria-header">
+                <h1 class="categoria-titulo">🎮 JOGOS</h1>
+                <p class="categoria-subtitulo">ESCOLHA O TIPO DE JOGO</p>
+            </div>
+            <div class="categoria-content">
+                <div class="jogos-grid">
+                    <div class="jogo-card" data-tipo="fliperama">
+                        <div class="jogo-icon">🕹️</div>
+                        <h3>FLIPERAMA</h3>
+                        <p>Jogos clássicos de arcade</p>
+                    </div>
+                    <div class="jogo-card" data-tipo="dardos">
+                        <div class="jogo-icon">🎯</div>
+                        <h3>DARDOS</h3>
+                        <p>Precisão e mira</p>
+                    </div>
+                    <div class="jogo-card" data-tipo="sinuca">
+                        <div class="jogo-icon">🎱</div>
+                        <h3>SINUCA</h3>
+                        <p>Estratégia e habilidade</p>
+                    </div>
+                    <div class="jogo-card" data-tipo="mesa">
+                        <div class="jogo-icon">🎲</div>
+                        <h3>JOGOS DE MESA</h3>
+                        <p>Tabuleiro e cartas</p>
+                    </div>
+                </div>
+            </div>
+            <button class="back-btn categoria-back-btn" data-voltar="opcoes">VOLTAR</button>
+        </div>
+    </div>
+
+    <!-- ===== TELA DE COMIDAS ===== -->
+    <div class="categoria-tela" id="comidas-tela">
+        <div class="categoria-container">
+            <div class="categoria-header">
+                <h1 class="categoria-titulo">🍕 COMIDAS</h1>
+                <p class="categoria-subtitulo">SABOREIE NOSSAS DELÍCIAS!</p>
+            </div>
+            <div class="categoria-content">
+                <div class="comidas-grid">
+                    <div class="comida-card">
+                        <div class="comida-icon">🍔</div>
+                        <h3>LANCHES</h3>
+                        <p>Hambúrgueres artesanais</p>
+                        <div class="comida-preco">A partir de R$ 25,90</div>
+                    </div>
+                    <div class="comida-card">
+                        <div class="comida-icon">🍕</div>
+                        <h3>PIZZAS</h3>
+                        <p>Massas frescas e recheios</p>
+                        <div class="comida-preco">A partir de R$ 35,90</div>
+                    </div>
+                    <div class="comida-card">
+                        <div class="comida-icon">🍗</div>
+                        <h3>PETISCOS</h3>
+                        <p>Porções para compartilhar</p>
+                        <div class="comida-preco">A partir de R$ 18,90</div>
+                    </div>
+                    <div class="comida-card">
+                        <div class="comida-icon">🥤</div>
+                        <h3>BEBIDAS</h3>
+                        <p>Refrigerantes e drinks</p>
+                        <div class="comida-preco">A partir de R$ 8,90</div>
+                    </div>
+                    <div class="comida-card">
+                        <div class="comida-icon">🍦</div>
+                        <h3>SOBREMESAS</h3>
+                        <p>Doces e sorvetes</p>
+                        <div class="comida-preco">A partir de R$ 12,90</div>
+                    </div>
+                    <div class="comida-card">
+                        <div class="comida-icon">☕</div>
+                        <h3>CAFÉS</h3>
+                        <p>Espressos e cappuccinos</p>
+                        <div class="comida-preco">A partir de R$ 6,90</div>
+                    </div>
+                </div>
+            </div>
+            <button class="back-btn categoria-back-btn" data-voltar="opcoes">VOLTAR</button>
+        </div>
+    </div>
+
+    <!-- ===== TELA DE PONTOS ACUMULADOS ===== -->
+    <div class="categoria-tela" id="pontos-tela">
+        <div class="categoria-container">
+            <div class="categoria-header">
+                <h1 class="categoria-titulo">PONTOS ACUMULADOS</h1>
+                <p class="categoria-subtitulo">TROQUE SEUS PONTOS POR PRÊMIOS</p>
+            </div>
+            
+            <div class="categoria-content">
+                <!-- Seção de pontos acumulados -->
+                <div class="pontos-container">
+                    <div class="pontos-card">
+                        <div class="pontos-header">
+                            <h2 class="pontos-titulo">SEUS PONTOS</h2>
+                            <div class="pontos-total">
+                                <span class="pontos-valor">265</span>
+                                <span class="pontos-label">pts</span>
+                            </div>
+                        </div>
+                        
+                        <div class="jogos-pontos">
+                            <div class="jogo-ponto-item">
+                                <div class="jogo-info">
+                                    <div class="jogo-icon">👾</div>
+                                    <div class="jogo-detalhes">
+                                        <h3>SPACE INVADERS</h3>
+                                        <p>Clássico dos arcades - 1978</p>
+                                    </div>
+                                </div>
+                                <div class="pontos-jogo">80 pts</div>
+                            </div>
+                            
+                            <div class="jogo-ponto-item">
+                                <div class="jogo-info">
+                                    <div class="jogo-icon">🍒</div>
+                                    <div class="jogo-detalhes">
+                                        <h3>PAC-MAN</h3>
+                                        <p>Come fantasmas - 1980</p>
+                                    </div>
+                                </div>
+                                <div class="pontos-jogo">105 pts</div>
+                            </div>
+                            
+                            <div class="jogo-ponto-item">
+                                <div class="jogo-info">
+                                    <div class="jogo-icon">🎯</div>
+                                    <div class="jogo-detalhes">
+                                        <h3>DART CHAMPION</h3>
+                                        <p>Dardos eletrônicos</p>
+                                    </div>
+                                </div>
+                                <div class="pontos-jogo">20 pts</div>
+                            </div>
+                            
+                            <div class="jogo-ponto-item">
+                                <div class="jogo-info">
+                                    <div class="jogo-icon">🎱</div>
+                                    <div class="jogo-detalhes">
+                                        <h3>POOL MASTER</h3>
+                                        <p>Sinuca americana</p>
+                                    </div>
+                                </div>
+                                <div class="pontos-jogo">60 pts</div>
+                            </div>
+                            
+                            <div class="jogo-ponto-item">
+                                <div class="jogo-info">
+                                    <div class="jogo-icon">🃏</div>
+                                    <div class="jogo-detalhes">
+                                        <h3>POKER NIGHT</h3>
+                                        <p>Poker Texas Hold'em</p>
+                                    </div>
+                                </div>
+                                <div class="pontos-jogo">45 pts</div>
+                            </div>
+                            
+                            <div class="jogo-ponto-item">
+                                <div class="jogo-info">
+                                    <div class="jogo-icon">⚫</div>
+                                    <div class="jogo-detalhes">
+                                        <h3>DAMAS CHINESAS</h3>
+                                        <p>Estratégia clássica</p>
+                                    </div>
+                                </div>
+                                <div class="pontos-jogo">35 pts</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Seção de troca de pontos -->
+                    <div class="troca-container">
+                        <div class="troca-card">
+                            <h2 class="troca-titulo">TROQUE SEUS PONTOS POR</h2>
+                            <div class="premios-grid">
+                                <div class="premio-card">
+                                    <div class="premio-icon">🎁</div>
+                                    <h3>KIT ESPECIAL MAVI'S</h3>
+                                    <p>Camiseta exclusiva + Copo personalizado</p>
+                                    <div class="premio-pontos">1000 pts</div>
+                                    <button class="trocar-btn" disabled>TROCAR</button>
+                                </div>
+                                
+                                <div class="premio-card">
+                                    <div class="premio-icon">🍕</div>
+                                    <h3>PIZZA FAMÍLIA</h3>
+                                    <p>Pizza grande + Refrigerante 2L</p>
+                                    <div class="premio-pontos">800 pts</div>
+                                    <button class="trocar-btn" disabled>TROCAR</button>
+                                </div>
+                                
+                                <div class="premio-card">
+                                    <div class="premio-icon">🎬</div>
+                                    <h3>INGRESSO DUPLO</h3>
+                                    <p>2 ingressos para qualquer sessão</p>
+                                    <div class="premio-pontos">600 pts</div>
+                                    <button class="trocar-btn" disabled>TROCAR</button>
+                                </div>
+                                
+                                <div class="premio-card">
+                                    <div class="premio-icon">🥤</div>
+                                    <h3>COMBO BEBIDAS</h3>
+                                    <p>4 refrigerantes ou 2 drinks especiais</p>
+                                    <div class="premio-pontos">300 pts</div>
+                                    <button class="trocar-btn">TROCAR</button>
+                                </div>
+                                
+                                <div class="premio-card">
+                                    <div class="premio-icon">🍔</div>
+                                    <h3>LANCHE ARTESANAL</h3>
+                                    <p>Hambúrguer artesanal + Batata frita</p>
+                                    <div class="premio-pontos">250 pts</div>
+                                    <button class="trocar-btn">TROCAR</button>
+                                </div>
+                                
+                                <div class="premio-card">
+                                    <div class="premio-icon">🎮</div>
+                                    <h3>1 HORA DE JOGOS</h3>
+                                    <p>1 hora gratuita em qualquer fliperama</p>
+                                    <div class="premio-pontos">200 pts</div>
+                                    <button class="trocar-btn">TROCAR</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <button class="back-btn categoria-back-btn" data-voltar="opcoes">VOLTAR</button>
+        </div>
+    </div>
+
+    <!-- ===== TELA DE PERFIL DO USUÁRIO ===== -->
+    <div class="categoria-tela" id="perfil-tela">
+        <div class="categoria-container">
+            <div class="categoria-header">
+                <h1 class="categoria-titulo">👤 MEU PERFIL</h1>
+                <p class="categoria-subtitulo">SUAS INFORMAÇÕES E ATIVIDADES</p>
+            </div>
+            
+            <div class="categoria-content">
+                <div class="perfil-container">
+                    <div class="perfil-card">
+                        <!-- Informações Pessoais -->
+                        <div class="perfil-section">
+                            <h2 class="perfil-section-titulo">INFORMAÇÕES PESSOAIS</h2>
+                            <div class="perfil-info">
+                                <div class="perfil-avatar">
+                                    <div class="avatar-icon">👤</div>
+                                    <button class="editar-avatar-btn">ALTERAR AVATAR</button>
+                                </div>
+                                <div class="perfil-detalhes">
+                                    <div class="info-item">
+                                        <span class="info-label">NOME:</span>
+                                        <span class="info-value">João Silva</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <span class="info-label">EMAIL:</span>
+                                        <span class="info-value">joao.silva@email.com</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <span class="info-label">TELEFONE:</span>
+                                        <span class="info-value">(11) 99999-9999</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <span class="info-label">DATA DE CADASTRO:</span>
+                                        <span class="info-value">15/03/2024</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Estatísticas -->
+                        <div class="perfil-section">
+                            <h2 class="perfil-section-titulo">ESTATÍSTICAS</h2>
+                            <div class="estatisticas-grid">
+                                <div class="estatistica-card">
+                                    <div class="estatistica-icon">🎮</div>
+                                    <div class="estatistica-info">
+                                        <h3>JOGOS JOGADOS</h3>
+                                        <div class="estatistica-valor">24</div>
+                                    </div>
+                                </div>
+                                <div class="estatistica-card">
+                                    <div class="estatistica-icon">🎬</div>
+                                    <div class="estatistica-info">
+                                        <h3>FILMES ASSISTIDOS</h3>
+                                        <div class="estatistica-valor">8</div>
+                                    </div>
+                                </div>
+                                <div class="estatistica-card">
+                                    <div class="estatistica-icon">🎤</div>
+                                    <div class="estatistica-info">
+                                        <h3>MÚSICAS CANTADAS</h3>
+                                        <div class="estatistica-valor">12</div>
+                                    </div>
+                                </div>
+                                <div class="estatistica-card">
+                                    <div class="estatistica-icon">🏆</div>
+                                    <div class="estatistica-info">
+                                        <h3>PONTOS TOTAIS</h3>
+                                        <div class="estatistica-valor">265</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Jogos Favoritos -->
+                        <div class="perfil-section">
+                            <h2 class="perfil-section-titulo">JOGOS FAVORITOS</h2>
+                            <div class="favoritos-grid">
+                                <div class="favorito-card">
+                                    <div class="favorito-icon">👾</div>
+                                    <div class="favorito-info">
+                                        <h3>SPACE INVADERS</h3>
+                                        <p>80 pontos acumulados</p>
+                                        <div class="favorito-stats">
+                                            <span>🎯 15 vitórias</span>
+                                            <span>⏱️ 8h jogadas</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="favorito-card">
+                                    <div class="favorito-icon">🍒</div>
+                                    <div class="favorito-info">
+                                        <h3>PAC-MAN</h3>
+                                        <p>105 pontos acumulados</p>
+                                        <div class="favorito-stats">
+                                            <span>🎯 22 vitórias</span>
+                                            <span>⏱️ 12h jogadas</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="favorito-card">
+                                    <div class="favorito-icon">🎱</div>
+                                    <div class="favorito-info">
+                                        <h3>POOL MASTER</h3>
+                                        <p>60 pontos acumulados</p>
+                                        <div class="favorito-stats">
+                                            <span>🎯 18 vitórias</span>
+                                            <span>⏱️ 6h jogadas</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Histórico Recente -->
+                        <div class="perfil-section">
+                            <h2 class="perfil-section-titulo">HISTÓRICO RECENTE</h2>
+                            <div class="historico-list">
+                                <div class="historico-item">
+                                    <div class="historico-icon">🎮</div>
+                                    <div class="historico-info">
+                                        <h3>PAC-MAN</h3>
+                                        <p>+15 pontos • Hoje 19:30</p>
+                                    </div>
+                                    <div class="historico-pontos">+15</div>
+                                </div>
+                                <div class="historico-item">
+                                    <div class="historico-icon">🎬</div>
+                                    <div class="historico-info">
+                                        <h3>Missão Impossível</h3>
+                                        <p>Sessão 16:30 • Hoje</p>
+                                    </div>
+                                    <div class="historico-pontos">+20</div>
+                                </div>
+                                <div class="historico-item">
+                                    <div class="historico-icon">🍕</div>
+                                    <div class="historico-info">
+                                        <h3>Pizza Margherita</h3>
+                                        <p>Pedido #2847 • Ontem</p>
+                                    </div>
+                                    <div class="historico-pontos">+10</div>
+                                </div>
+                                <div class="historico-item">
+                                    <div class="historico-icon">🎤</div>
+                                    <div class="historico-info">
+                                        <h3>Bohemian Rhapsody</h3>
+                                        <p>Karaokê • 2 dias atrás</p>
+                                    </div>
+                                    <div class="historico-pontos">+5</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Ações -->
+                        <div class="perfil-actions">
+                            <button class="perfil-btn editar-btn">EDITAR PERFIL</button>
+                            <button class="perfil-btn sair-btn">SAIR</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <button class="back-btn categoria-back-btn" data-voltar="opcoes">VOLTAR</button>
+        </div>
+    </div>
+
+    <!-- ===== TELAS DE DETALHES (CONTEÚDO DINÂMICO) ===== -->
+
+    <!-- Cinema Detalhes -->
+    <div class="categoria-tela" id="cinema-detalhes-tela">
+        <div class="categoria-container">
+            <div class="categoria-header">
+                <h1 class="categoria-titulo" id="cinema-genero-titulo">🎬 FILMES</h1>
+                <p class="categoria-subtitulo" id="cinema-genero-subtitulo">ESCOLHA SEU FILME</p>
+            </div>
+            <div class="categoria-content">
+                <div class="sessoes-grid" id="sessoes-container">
+                    <!-- Conteúdo carregado dinamicamente -->
+                </div>
+            </div>
+            <button class="back-btn categoria-back-btn" data-voltar="cinema">VOLTAR</button>
+        </div>
+    </div>
+
+    <!-- Karaokê Detalhes -->
+    <div class="categoria-tela" id="karaoke-playlist-tela">
+        <div class="categoria-container">
+            <div class="categoria-header">
+                <h1 class="categoria-titulo" id="karaoke-estilo-titulo">🎤 KARAOKÊ</h1>
+                <p class="categoria-subtitulo" id="karaoke-estilo-subtitulo">ESCOLHA SUA MÚSICA</p>
+            </div>
+            <div class="categoria-content">
+                <div class="playlist-grid" id="playlist-container">
+                    <!-- Conteúdo carregado dinamicamente -->
+                </div>
+            </div>
+            <button class="back-btn categoria-back-btn" data-voltar="karaoke">VOLTAR</button>
+        </div>
+    </div>
+
+    <!-- Jogos Detalhes -->
+    <div class="categoria-tela" id="jogo-fliperama-tela">
+        <div class="categoria-container">
+            <div class="categoria-header">
+                <h1 class="categoria-titulo" id="jogos-tipo-titulo">🎮 JOGOS</h1>
+                <p class="categoria-subtitulo" id="jogos-tipo-subtitulo">ESCOLHA SEU JOGO</p>
+            </div>
+            <div class="categoria-content">
+                <div class="jogos-detalhes-grid" id="jogos-container">
+                    <!-- Conteúdo carregado dinamicamente -->
+                </div>
+            </div>
+            <button class="back-btn categoria-back-btn" data-voltar="jogos">VOLTAR</button>
+        </div>
+    </div>
+
+        <!-- ===== TELA DE PEDIDOS DE COMIDA ===== -->
+        <div class="categoria-tela" id="comidas-pedido-tela">
+            <div class="categoria-container">
+                <div class="categoria-header">
+                    <h1 class="categoria-titulo">🍔 FAZER PEDIDO</h1>
+                    <p class="categoria-subtitulo">ADICIONE ITENS AO SEU PEDIDO</p>
+                </div>
+                <div class="categoria-content">
+                    <div class="pedido-grid">
+                        <!-- LANCHES -->
+                        <div class="item-card">
+                            <div class="item-info">
+                                <div class="item-icon">🍔</div>
+                                <div class="item-detalhes">
+                                    <h3>Hambúrguer Artesanal</h3>
+                                    <p>Pão brioche, carne 180g, queijo, alface, tomate</p>
+                                    <div class="item-preco">R$ 25,90</div>
+                                </div>
+                            </div>
+                            <div class="item-controles">
+                                <button class="quantidade-btn">-</button>
+                                <span class="quantidade">0</span>
+                                <button class="quantidade-btn">+</button>
+                                <button class="adicionar-btn">ADICIONAR</button>
+                            </div>
+                        </div>
+                        
+                        <div class="item-card">
+                            <div class="item-info">
+                                <div class="item-icon">🌭</div>
+                                <div class="item-detalhes">
+                                    <h3>Hot Dog Especial</h3>
+                                    <p>Pão, 2 salsichas, milho, batata palha, molhos</p>
+                                    <div class="item-preco">R$ 18,90</div>
+                                </div>
+                            </div>
+                            <div class="item-controles">
+                                <button class="quantidade-btn">-</button>
+                                <span class="quantidade">0</span>
+                                <button class="quantidade-btn">+</button>
+                                <button class="adicionar-btn">ADICIONAR</button>
+                            </div>
+                        </div>
+    
+                        <!-- PIZZAS -->
+                        <div class="item-card">
+                            <div class="item-info">
+                                <div class="item-icon">🍕</div>
+                                <div class="item-detalhes">
+                                    <h3>Pizza Margherita</h3>
+                                    <p>Molho de tomate, mussarela, manjericão fresco</p>
+                                    <div class="item-preco">R$ 35,90</div>
+                                </div>
+                            </div>
+                            <div class="item-controles">
+                                <button class="quantidade-btn">-</button>
+                                <span class="quantidade">0</span>
+                                <button class="quantidade-btn">+</button>
+                                <button class="adicionar-btn">ADICIONAR</button>
+                            </div>
+                        </div>
+                        
+                        <div class="item-card">
+                            <div class="item-info">
+                                <div class="item-icon">🍕</div>
+                                <div class="item-detalhes">
+                                    <h3>Pizza Calabresa</h3>
+                                    <p>Molho, mussarela, calabresa, cebola, azeitonas</p>
+                                    <div class="item-preco">R$ 38,90</div>
+                                </div>
+                            </div>
+                            <div class="item-controles">
+                                <button class="quantidade-btn">-</button>
+                                <span class="quantidade">0</span>
+                                <button class="quantidade-btn">+</button>
+                                <button class="adicionar-btn">ADICIONAR</button>
+                            </div>
+                        </div>
+    
+                        <!-- PETISCOS -->
+                        <div class="item-card">
+                            <div class="item-info">
+                                <div class="item-icon">🍗</div>
+                                <div class="item-detalhes">
+                                    <h3>Porção de Fritas</h3>
+                                    <p>Batata frita crocante com cheddar e bacon</p>
+                                    <div class="item-preco">R$ 22,90</div>
+                                </div>
+                            </div>
+                            <div class="item-controles">
+                                <button class="quantidade-btn">-</button>
+                                <span class="quantidade">0</span>
+                                <button class="quantidade-btn">+</button>
+                                <button class="adicionar-btn">ADICIONAR</button>
+                            </div>
+                        </div>
+                        
+                        <div class="item-card">
+                            <div class="item-info">
+                                <div class="item-icon">🧀</div>
+                                <div class="item-detalhes">
+                                    <h3>Onion Rings</h3>
+                                    <p>Anéis de cebola empanados e crocantes</p>
+                                    <div class="item-preco">R$ 16,90</div>
+                                </div>
+                            </div>
+                            <div class="item-controles">
+                                <button class="quantidade-btn">-</button>
+                                <span class="quantidade">0</span>
+                                <button class="quantidade-btn">+</button>
+                                <button class="adicionar-btn">ADICIONAR</button>
+                            </div>
+                        </div>
+    
+                        <!-- BEBIDAS -->
+                        <div class="item-card">
+                            <div class="item-info">
+                                <div class="item-icon">🥤</div>
+                                <div class="item-detalhes">
+                                    <h3>Refrigerante 500ml</h3>
+                                    <p>Coca-Cola, Guaraná, Fanta ou Sprite</p>
+                                    <div class="item-preco">R$ 8,90</div>
+                                </div>
+                            </div>
+                            <div class="item-controles">
+                                <button class="quantidade-btn">-</button>
+                                <span class="quantidade">0</span>
+                                <button class="quantidade-btn">+</button>
+                                <button class="adicionar-btn">ADICIONAR</button>
+                            </div>
+                        </div>
+                        
+                        <div class="item-card">
+                            <div class="item-info">
+                                <div class="item-icon">🍹</div>
+                                <div class="item-detalhes">
+                                    <h3>Suco Natural 500ml</h3>
+                                    <p>Laranja, Limão, Maracujá ou Abacaxi</p>
+                                    <div class="item-preco">R$ 12,90</div>
+                                </div>
+                            </div>
+                            <div class="item-controles">
+                                <button class="quantidade-btn">-</button>
+                                <span class="quantidade">0</span>
+                                <button class="quantidade-btn">+</button>
+                                <button class="adicionar-btn">ADICIONAR</button>
+                            </div>
+                        </div>
+    
+                        <!-- SOBREMESAS -->
+                        <div class="item-card">
+                            <div class="item-info">
+                                <div class="item-icon">🍦</div>
+                                <div class="item-detalhes">
+                                    <h3>Sorvete Casquinha</h3>
+                                    <p>Chocolate, Baunilha ou Morango</p>
+                                    <div class="item-preco">R$ 9,90</div>
+                                </div>
+                            </div>
+                            <div class="item-controles">
+                                <button class="quantidade-btn">-</button>
+                                <span class="quantidade">0</span>
+                                <button class="quantidade-btn">+</button>
+                                <button class="adicionar-btn">ADICIONAR</button>
+                            </div>
+                        </div>
+                        
+                        <div class="item-card">
+                            <div class="item-info">
+                                <div class="item-icon">🍫</div>
+                                <div class="item-detalhes">
+                                    <h3>Brownie com Sorvete</h3>
+                                    <p>Brownie quente com bola de sorvete</p>
+                                    <div class="item-preco">R$ 18,90</div>
+                                </div>
+                            </div>
+                            <div class="item-controles">
+                                <button class="quantidade-btn">-</button>
+                                <span class="quantidade">0</span>
+                                <button class="quantidade-btn">+</button>
+                                <button class="adicionar-btn">ADICIONAR</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="carrinho-resumo">
+                        <h3>🛒 SEU PEDIDO</h3>
+                        <div class="carrinho-itens">
+                            <p>Nenhum item adicionado</p>
+                        </div>
+                        <div class="carrinho-total">
+                            <strong>Total: R$ 0,00</strong>
+                        </div>
+                        <button class="finalizar-pedido-btn">FINALIZAR PEDIDO</button>
+                    </div>
+                </div>
+                <button class="back-btn categoria-back-btn" data-voltar="comidas">VOLTAR</button>
+            </div>
+        </div>
+    <script src="script.js"></script>
+</body>
+</html>
